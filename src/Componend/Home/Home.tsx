@@ -5,20 +5,25 @@ const Home = () => {
     //highlight Spaceflight
 
     <div className="">
-      <h1 className="spaceflight">Spaceflight details </h1>
-      <p className="findOut">
-        {" "}
-        Find out the elaborate features of all the past big spaceflights.
-      </p>
+      <div>
+        <h1 className="spaceflight">Spaceflight details </h1>
+        <p className="findOut md:findOut sm:findOut">
 
-      <div className="grid lg:grid-cols-2 ">
-        <div className="">
+          Find out the elaborate features of all the past big spaceflights.
+        </p>
+      </div>
+      <p className="flex justify-end mt-10   md:flex md:justify-end sm:flex sm:justify-end">
+        <input type="checkbox" /> Show upcoming only
+      </p>
+   <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-2 sm:grid-cols-1 ">
+   <div >
+        <div className="flex">
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered mt-[50px] ml-[300px]  rounded-[4px] w-[424px] h-[38px] max-w-xs"
+            className="input input-bordered mt-[50px] ml-[50px]  rounded-[4px] w-[424px] h-[38px] max-w-xs"
           />
-          <button className="p-[7px, 13px, 7px, 13px] w-[42px] h-[38px]   rounded-r-lg hover:bg-[#0D6EFD] bg-[#0D6EFD]">
+          <button className="p-[7px, 13px, 7px, 13px] w-[42px] h-[38px]  mt-[50px]  rounded-r-lg hover:bg-[#0D6EFD] bg-[#0D6EFD]">
             <svg
               className="align-middle m-auto"
               xmlns="http://www.w3.org/2000/svg"
@@ -41,28 +46,29 @@ const Home = () => {
             </svg>
           </button>
         </div>
-        <div className="mt-10">
-          <ul className="menu menu-horizontal px-1">
-            <li tabIndex={0}>
-              <details>
-                <summary>
-                  <div className="w-[256px] h-[38px] text-[#CED4DA] text-center mx-auto align-middle text-[16px] font-[400] font-[Helvetica Neue]">
-                    By Launch Status
-                  </div>
-                </summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </div>
+      
       </div>
+    
+     
+        <div className="m-auto mt-[50px]  ">
+          <select className="border flex justify-between w-[256px] h-[38px]" name="cars" id="cars">
+            <option value="volvo">By Launch Status :</option>
+         
+          </select>
+        </div>
+        
+        <div className="m-auto   mt-[50px]  ">
+          <select className="border flex justify-between w-[256px] h-[38px]" name="cars" id="cars">
+            <option value="volvo">By Launch Date :</option>
+            <option value="saab">Last Week</option>
+            <option value="opel">Last Month</option>
+            <option value="audi">Last Year</option>
+          </select>
+        </div>
+
+   </div>
+
+
     </div>
   );
 };
