@@ -12,14 +12,15 @@ const Home = () => {
       </p>
 
       <div className="grid lg:grid-cols-2 ">
-        <div className="ml-20 mt-10">
+        <div className="">
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered rounded-l-md w-full max-w-xs"
+            className="input input-bordered mt-[50px] ml-[300px]  rounded-[4px] w-[424px] h-[38px] max-w-xs"
           />
-          <button className="p-4 btn rounded-r-lg hover:bg-[#0D6EFD] bg-[#0D6EFD]">
+          <button className="p-[7px, 13px, 7px, 13px] w-[42px] h-[38px]   rounded-r-lg hover:bg-[#0D6EFD] bg-[#0D6EFD]">
             <svg
+              className="align-middle m-auto"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
@@ -41,15 +42,25 @@ const Home = () => {
           </button>
         </div>
         <div className="mt-10">
-        <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+          <ul className="menu menu-horizontal px-1">
+            <li tabIndex={0}>
+              <details>
+                <summary>
+                  <div className="w-[256px] h-[38px] text-[#CED4DA] text-center mx-auto align-middle text-[16px] font-[400] font-[Helvetica Neue]">
+                    By Launch Status
+                  </div>
+                </summary>
+                <ul className="p-2">
+                  <li>
+                    <a>Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
           </ul>
-        </details>
-      </li>
         </div>
       </div>
     </div>
